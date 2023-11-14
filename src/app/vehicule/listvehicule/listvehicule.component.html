@@ -1,0 +1,64 @@
+
+<mat-toolbar color="primary">
+   
+    <div>
+    <h1>Gestion des Véhicules</h1> 
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="end center" fxHide.xs>
+    
+      <ul fxLayout fxLayoutGap = "15px" class="navigation-items">
+        
+        <li>
+          <button type="button" class="btn btn-info" (click)="addvehicule()" >Ajouter Véhicule</button>
+        </li>  
+      </ul>
+  
+    </div>
+  </mat-toolbar>  
+     <div class="pricing-header mx-auto">
+       <div class="table-responsive">
+        <table class="table table-bordered table-responsive-sm table-responsive-md
+       table-responsive-lg">
+        <thead>
+        <tr>
+            
+          <th scope="col">Num Véhicule</th>  
+        <th scope="col">Num Chassis</th>
+        <th scope="col">Nbre Cheveaux</th>
+        <th scope="col">Date Circulation</th>
+        <th scope="col">Fabricant</th>
+        <th scope="col">Marque</th>
+        <th scope="col">Type Véhicule</th>
+        <th scope="col">Type Carburant</th>
+                <th class="text-center" scope="col">Editer</th>
+        <th class="text-center" scope="col">Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor= "let item of listData | async">
+  
+          <td>{{item.num_vehicule}}   </td>       
+    <td>{{item.num_chassis}}   </td>
+    <td>{{item.nbr_chv}}   </td>
+    <td>{{item.date_circulation}}   </td>
+    <td>{{item.idFabricant.lib_fabricant}}</td>
+    <td>{{item.idModele.lib_Modele}}</td>
+    <td>{{item.idTypeVehicule.lib_type_vehicule}}</td>
+    <td>{{item.idTypeCarburant.lib_type_carburant}}</td>
+    <td style="position: static;"><center><button  class="btn btn-warning"  (click) = "selectData(item)">
+      <i class="fa fa-pencil-square-o" ></i></button></center></td>
+     <td><center><button class="btn btn-danger" (click) = "removeData(item.idVehicule)">
+       <i class="fa fa-trash-o"></i></button> </center> </td>
+      </tr>
+      </tbody>
+  
+          
+        
+             </table>
+             </div>
+            
+            </div>  
+          
+  
+  
+  

@@ -1,0 +1,62 @@
+<!--<body class="bg-img" >
+  <div class="container" >
+  <div class="row justify-content-center">
+  <div class="col-xl-8 col-lg-10 col-md-7">
+  <div class="card o-hidden border-0 shadow-lg my-5">
+  <div class="card-body p-0">
+  <div class="row">
+  <div class="col-lg-4 justify-content-center">
+    <img src="assets/login/img/login8.jpg" class="img-circle " alt="User Image">
+  </div> 
+  <div class="col-lg-8">
+  <div class="p-5">
+  <div class="text-center">
+    <h1 class="h4 text-gray-900 mb-4"  >Log in</h1>
+  </div>
+  <form class = "user" [formGroup]="this.loginForm" (ngSubmit)="login()">
+  
+    <div class="input-group mb-3">  
+     <div class="input-group-prepend">  
+      <span class="input-group-text"><i class="icon-user"></i></span>  
+     </div>  
+     <input type="text" class="form-control sty1"  id="login" formControlName="login" placeholder="Tapez votre login" required>
+    </div>  
+    <div class="input-group mb-4">  
+     <div class="input-group-prepend">  
+      <span class="input-group-text"><i class="icon-lock"></i></span>  
+     </div>
+      <input type="password" class="form-control sty1"  id="password" formControlName="password" placeholder="Tapez votre mot de passe" required>
+     </div>  
+    
+      <button class="btn btn-primary btn-user btn-block" style="font-size: 14px;">Login</button>
+      
+  </form>
+     
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </body>-->
+  <body>
+    <form class = "user" [formGroup]="this.loginForm" (ngSubmit)="login()">
+  
+    <div class="title">Ministère de  l'Education</div>
+    <div class="subtitle">Plate-Forme Parc Auto</div>
+    <div class="input-container ic1">
+      <input type="text"   id="login" formControlName="login"  class="input"  placeholder=" " required />
+      <div class="cut"></div>
+      <label for="login" class="placeholder">Login</label>
+    </div>
+    <div class="input-container ic2">
+      <input type="password"  id="password" formControlName="password"    class="input" placeholder=" "  required/>
+      <div class="cut"></div>
+      <label for="lastname" class="placeholder">Mot de passe</label>
+    </div>
+    
+    <button type="text" class="submit">Enter</button>
+  </form>
+</body>

@@ -1,0 +1,23 @@
+<div class="col-md-12 col-md-offset-2">
+    <h1>Type du carburant :</h1>    
+    <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+      <input type="hidden"  formControlName="idTypeVehicule" id="idTypeVehicule">
+      <div class="form-group">
+        
+        <label>Type du carburant</label>
+        <input type="text" class="form-control" formControlName="lib_type_carburant" id="lib_type_carburant" placeholder="Nom du Type  carburant">
+       
+      
+        
+      </div>
+     
+      <div class="form-group">
+    
+        <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+        <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i> Close</button>
+    
+
+</div>
+    </form>
+</div>
+

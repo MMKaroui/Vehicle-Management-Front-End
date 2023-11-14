@@ -1,0 +1,25 @@
+
+<div class="col-md-12 col-md-offset-2">
+    <h1>Etat :</h1>    
+    <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()">
+      <input type="hidden"  formControlName="idEtat" id="idEtat">
+      <div class="form-group">
+        <label>Libelle </label>
+        <input type="text" class="form-control" formControlName="lib_etat" id="lib_etat">
+        
+      </div>
+      <div class="form-group">
+        <label>Description </label>
+        <input type="text" class="form-control" formControlName="desc_etat" id="desc_etat">
+        
+      </div>
+      
+      <div class="form-group">
+    
+        <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+        <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i> Close</button>
+    
+
+</div>
+    </form>
+</div>

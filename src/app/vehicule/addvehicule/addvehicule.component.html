@@ -1,0 +1,59 @@
+<div class="col-md-12 col-md-offset-2">
+  <mat-toolbar color="primary">
+    <div >
+  <mat-toolbar-row>
+  <span class="toolbar"> <h1>Véhicule</h1></span>
+      </mat-toolbar-row>
+      </div> </mat-toolbar> <br>
+       
+    <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()"  #userForm="ngForm">
+       <!--{{userForm.value | json}} --> 
+      <input type="hidden"  formControlName="idVehicule" id="idVehicule">
+      <div class="form-group">
+        
+        <input type="text" class="form-control" formControlName="num_vehicule" id="num_vehicule" placeholder="Numéro du véhicule">
+        
+        <input type="text" class="form-control" formControlName="num_chassis" id="num_chassis" placeholder="Numéro du chassis">
+        
+        <input type="text" class="form-control" formControlName="nbr_chv" id="nbr_chv" placeholder="Nombre de cheveaux">
+        <label>Date de premiére circulation </label> <br>
+        <input type ="date" name="date_circulation"  formControlName="date_circulation" required >     
+      </div>
+      <div class="form-group">
+        <label>Fabricant </label>
+     <select class="form-control" name="idFabricant"  formControlName="idFabricant" id="idFabricant" (ngModelChange)="onSelectFabricant($event)">
+      <option value="0">-Select-</option>
+      <option *ngFor ="let item of FabricantList"  [ngValue]="item" >{{item.lib_fabricant}}</option>
+          </select>
+  </div>
+  <div class="form-group">
+    <label>Marque </label>
+ <select class="form-control" name="idModele"  formControlName="idModele" id="idModele">
+  <option value="0">-Select-</option>
+  <option *ngFor ="let item of MarqueList" [ngValue]="item">{{item.lib_Modele}}</option>
+      </select>
+</div>
+<div class="form-group">
+    <label>Type Véhicule </label>
+ <select class="form-control" name="idTypeVehicule"  formControlName="idTypeVehicule" id="idTypeVehicule">
+  <option value="0">-Select-</option>
+  <option *ngFor ="let item of TypeVehiculeList" [ngValue]="item">{{item.lib_type_vehicule}}</option>
+      </select>
+</div>
+<div class="form-group">
+  <label>Type Carburant </label>
+<select class="form-control" name="idTypeCarburant"  formControlName="idTypeCarburant" id="idTypeCarburant">
+<option value="0">-Select-</option>
+<option *ngFor ="let item of TypeCarburantList" [ngValue]="item">{{item.lib_type_carburant}}</option>
+    </select>
+</div>
+     
+      <div class="form-group">
+    
+        <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Enregistrer</button>
+        <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i> Fermer</button>
+    
+
+</div>
+    </form>
+</div>

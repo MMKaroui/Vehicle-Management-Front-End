@@ -1,0 +1,32 @@
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+  }
+  
+div.scroll
+{
+    height: 500px;
+float: left;
+padding: 1%;
+overflow: scroll;
+}
+.mat-toolbar.mat-primary {
+  background: rgb(6, 2, 56);
+  color: rgb(14, 32, 39);
+}
+h1{
+  color: #fff; font-family: 'Helvetica Neue', sans-serif; font-size:28px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center;
+  margin-left: auto;
+margin-right: auto;
+}
+h6{
+  color: #fff; font-family: 'Helvetica NeueA', sans-serif; font-size:12px; font-weight: bold; letter-spacing:0px; line-height: 1; text-align: center;
+  margin-left: auto;
+margin-right: auto;
+}
+span {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}

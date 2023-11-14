@@ -1,0 +1,394 @@
+<!-- Page Wrapper -->
+   
+<div id="wrapper">
+    
+
+    <!-- Sidebar -->
+    <ul *ngIf= "this.userService.Adminastreur" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a *ngIf= "this.userService.Adminastreur" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            
+            <div class="sidebar-brand-text mx-3"><img src="../../assets/img/logo4.png"/></div>
+        </a>
+        <a *ngIf= "this.userService.ResReaparation" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            
+            <div class="sidebar-brand-text mx-3"><img src="../../assets/img/logo4.png"/></div>
+        </a>
+
+        
+        <li *ngIf= "this.userService.Adminastreur" class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Gestion Parc-Auto</span></a>
+        </li>
+        <li *ngIf= "this.userService.ResReaparation" class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Gestion Parc-Auto</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div *ngIf= "this.userService.Adminastreur" class="sidebar-heading">
+            Interface
+        </div>
+        <div *ngIf= "this.userService.ResReaparation" class="sidebar-heading">
+            Interface
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a *ngIf= "this.userService.Adminastreur" class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Gérer</span>
+            </a>
+            <a *ngIf= "this.userService.ResReaparation" class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Gérer</span>
+            </a>
+            <div *ngIf= "this.userService.Adminastreur" id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Table:</h6>
+                    <a class="collapse-item" routerLink="/users">Utilisateurs</a>
+                    <a class="collapse-item" routerLink="/roles">Rôles</a>
+                    <a class="collapse-item" routerLink="/etats">Etats</a>
+                    
+                    
+                   
+                    
+                </div>
+                
+            </div>
+            <div *ngIf= "this.userService.ResReaparation" id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Table:</h6>
+                     <a class="collapse-item" routerLink="/fabricants">Fabricant</a>
+                    <a class="collapse-item" routerLink="/marques">Marque</a>
+                    <a class="collapse-item" routerLink="/typeVehicules">Type Véhicule</a>
+                    <a class="collapse-item" routerLink="/typeCarburants">Type Carburant</a>
+                    <a class="collapse-item" routerLink="/typeReparations">Type Réparation</a>
+                    <a class="collapse-item" routerLink="/vehicules">Véhicule</a>
+                    <a class="collapse-item" routerLink="/ateliers">Atelier</a>
+                    <a class="collapse-item" routerLink="/factures">Facture</a>
+                    
+                   
+                    
+                </div>
+        </div>
+       
+        </li>
+
+    </ul>
+    <!-- Sidebar -->
+    <ul *ngIf= "this.userService.ResReaparation" class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+        <a *ngIf= "this.userService.Adminastreur" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            
+            <div class="sidebar-brand-text mx-3"><img src="../../assets/img/logo4.png"/></div>
+        </a>
+        <a *ngIf= "this.userService.ResReaparation" class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            
+            <div class="sidebar-brand-text mx-3"><img src="../../assets/img/logo4.png"/></div>
+        </a>
+
+        
+        <li *ngIf= "this.userService.Adminastreur" class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Gestion Parc-Auto</span></a>
+        </li>
+        <li *ngIf= "this.userService.ResReaparation" class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Gestion Parc-Auto</span></a>
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+
+        <!-- Heading -->
+        <div *ngIf= "this.userService.Adminastreur" class="sidebar-heading">
+            Interface
+        </div>
+        <div *ngIf= "this.userService.ResReaparation" class="sidebar-heading">
+            Interface
+        </div>
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a *ngIf= "this.userService.Adminastreur" class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Gérer</span>
+            </a>
+            <a *ngIf= "this.userService.ResReaparation" class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Gérer</span>
+            </a>
+            <div *ngIf= "this.userService.Adminastreur" id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Table:</h6>
+                    <a class="collapse-item" routerLink="/users">Utilisateurs</a>
+                    <a class="collapse-item" routerLink="/roles">Rôles</a>
+                    <a class="collapse-item" routerLink="/etats">Etats</a>
+                    
+                    
+                   
+                    
+                </div>
+                
+            </div>
+            <div *ngIf= "this.userService.ResReaparation" id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Table:</h6>
+                     <a class="collapse-item" routerLink="/fabricants">Fabricant</a>
+                    <a class="collapse-item" routerLink="/marques">Marque</a>
+                    <a class="collapse-item" routerLink="/typeVehicules">Type Véhicule</a>
+                    <a class="collapse-item" routerLink="/typeCarburants">Type Carburant</a>
+                    <a class="collapse-item" routerLink="/typeReparations">Type Réparation</a>
+                    <a class="collapse-item" routerLink="/vehicules">Véhicule</a>
+                    <a class="collapse-item" routerLink="/ateliers">Atelier</a>
+                    <a class="collapse-item" routerLink="/factures">Facture</a>
+                    
+                   
+                    
+                </div>
+        </div>
+       
+        </li>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+                <!-- Topbar Search -->
+                
+
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    
+
+                    <!-- Nav Item - Alerts -->
+                   
+
+                    <!-- Nav Item - Messages -->
+                   
+
+                    <div  class="topbar-divider d-none d-sm-block"></div>
+
+                    <!-- Nav Item - User Information -->
+                    <li *ngIf= "this.userService.Adminastreur" class="nav-item dropdown no-arrow"  >
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"  >Administrateur</span>
+                            <img class="img-profile rounded-circle"
+                                src="assets/img/undraw_profile.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="userDropdown">
+                            
+                            
+                           
+                            <a class="dropdown-item" href="#" data-toggle="modal" (click) = "logOut()">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                    <li *ngIf= "this.userService.ResReaparation" class="nav-item dropdown no-arrow"  >
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"  >Responsable de suivi</span>
+                            <img class="img-profile rounded-circle"
+                                src="assets/img/undraw_profile.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="userDropdown">
+                            
+                            
+                            
+                            <a class="dropdown-item" href="#" data-toggle="modal" (click) = "logOut()">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+                    <li *ngIf= "this.userService.ChefDuParc" class="nav-item dropdown no-arrow"  >
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small"  >Chef du parc</span>
+                            <img class="img-profile rounded-circle"
+                                src="assets/img/undraw_profile.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="userDropdown">
+                            
+                          
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" (click) = "logOut()">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </nav>
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+           
+        <div class="container-fluid">
+            <div  *ngIf= "this.userService.ChefDuParc" style="overflow-y:scroll;">
+               
+                
+                <mat-toolbar color="primary">
+                    <div >
+                        
+                        <mat-toolbar-row>
+                            <img src="../../assets/img/logo4.png"/>
+                            <h6>Ministère de l'éducation <br> Service parc-auto</h6>
+                         <span class="toolbar"> <h1>Statistique</h1></span>
+                       </mat-toolbar-row>
+                        
+                          </div>
+                  </mat-toolbar> 
+                    <div class="container-fluid px-4">
+                        <main>
+                            <div class="container-fluid px-4">
+                               
+                                <ol class="breadcrumb mb-4">
+                                    <li class="breadcrumb-item active">Vue Rapide</li>
+                                </ol>
+                                <div class="row">
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="card bg-primary text-white mb-4">
+                                            <div class="card-body">Nombre des Véhicules</div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="small text-white stretched-link" href="#">{{countV}}</a>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="card bg-warning text-white mb-4">
+                                            <div class="card-body">Nombre des Véhicules Service </div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="small text-white stretched-link" href="#">{{countVS}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="card bg-success text-white mb-4">
+                                            <div class="card-body">Nombre des Véhicules Fonction</div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                 <a class="small text-white stretched-link" href="#">{{countVF}}</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-md-6">
+                                        <div class="card bg-danger text-white mb-4">
+                                            <div class="card-body">Coût Tôtal de Réparation</div>
+                                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                                <a class="small text-white stretched-link" href="#">{{coutToTal}} DTN</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-6">
+                                        <div class="card mb-4">
+                                            <div class="card-header">
+                                                <i class="fas fa-chart-area me-1"></i>
+                                                Coût de Réparation selon les Types de véhicules 
+                                            </div>
+                                            <div class="card-body">  <app-pie-chart my-id="chart3"  type="pie" [coutVF]="coutVF" [coutVS]="coutVS"  ></app-pie-chart></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6">
+                                        <div class="card mb-4">
+                                            <div class="card-header">
+                                                <i class="fas fa-chart-bar me-1"></i>
+                                                Coût de Réparation selon la cathégorie de réapartion 
+                                            </div>
+                                            <div class="card-body"> <app-chart my-id="chart2"  type="bar" [coutEn]="coutEn" [coutEl]="coutEl" [coutMe]="coutMe" [coutTo]="coutTo" ></app-chart></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Rapport
+                                    </div>
+                                    <div class="card-body">
+                                        <app-etat-vehicules  [countV]="countV" ></app-etat-vehicules>
+                                    </div>
+                                </div>
+                            </div>
+                        </main>
+                
+    </div>
+    </div>
+        <router-outlet></router-outlet>
+        <!-- End of Main Content -->
+      </div>
+       
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="login.html">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

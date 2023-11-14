@@ -1,0 +1,67 @@
+<div class="col-md-12 col-md-offset-2 scroll">
+  <mat-toolbar color="primary">
+    <div >
+  <mat-toolbar-row>
+  <span class="toolbar"> <h1>Facture</h1></span>
+      </mat-toolbar-row>
+      </div> </mat-toolbar> <br>
+   
+    <form [formGroup]="this.crudApi.dataForm" (ngSubmit)="onSubmit()" #userForm="ngForm">
+     <!-- {{userForm.value | json}}  -->
+      <input type="hidden"  formControlName="idFacture" id="idFacture">
+      
+        <div class="form-group">
+      
+        <input type="text" class="form-control" formControlName="num_facture" id="num_facture" placeholder="Numéro facture">
+      </div>
+      <div class="form-group">
+        <label>Date de Facture </label> <br>
+        <input type ="date" name="date_facture"  formControlName="date_facture" required >     
+      </div>
+     
+      
+      
+      <div class="form-group">
+        <label>Vehicule </label>
+     <select class="form-control" name="idVehicule"  formControlName="idVehicule" id="idVehicule">
+      <option value="0">-Select-</option>
+      <option *ngFor ="let item of VehiculeList" [ngValue]="item">{{item.num_vehicule}}</option>
+          </select>
+  </div>
+  <div class="form-group">  
+    <label>Atelier </label>
+      <select  class="form-control" name="idAtelier"  formControlName="idAtelier" id ="idAtelier"  >
+          <option value="0">-Select-</option>
+          
+          <option *ngFor = "let item of AtelierList" [ngValue]="item"  >{{item.nom_atelier}}</option>
+      </select>
+    
+      </div>
+      <div class="form-group">  
+        <label>Type Réparation </label>
+          <select  class="form-control" name="idTypeReparation"  formControlName="idTypeReparation" id ="idTypeReparation"  >
+              <option value="0">-Select-</option>
+              
+              <option *ngFor = "let item of TypeReparationList" [ngValue]="item"  >{{item.lib_type_reparation}}</option>
+          </select>
+        
+          </div>
+          <div class="form-group">
+            <label>Observation </label>
+            
+              <textarea class="form-control rounded-0" formControlName="observation" id="observation" rows="10"></textarea>
+            
+          </div>
+          <div class="form-group">
+            <label>Total </label>
+            <input type="text" class="form-control" formControlName="total" id="total" placeholder="">
+          </div>
+      <div class="form-group">
+    
+        <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Enregistrer</button>
+        <button type="button" class="btn btn-outline-dark ml-1" [mat-dialog-close]><i class="fa fa-close"></i> Fermer</button>
+    
+
+</div>
+    </form>
+</div>
